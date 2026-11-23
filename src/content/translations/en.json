@@ -1,0 +1,472 @@
+{
+  "common": {
+    "brandName": "Amrapali Makeover",
+    "brandTagline": "Luxury Bridal & Editorial Beauty Artistry",
+    "bhiwandiBase": "Based in Bhiwandi, Thane, Maharashtra",
+    "travelQualifierShort": "Bhiwandi Base • Travel Across Maharashtra",
+    "travelQualifierFull": "On-location makeup services based in Bhiwandi, Thane. Travel bookings considered across Maharashtra subject to date and location availability.",
+    "onLocationService": "On-Location Service Only",
+    "enquiryBasedPricing": "Enquiry-Based Customized Pricing",
+    "noStudioNotice": "Services delivered exclusively at client venues. No customer-facing studio."
+  },
+  "announcement": {
+    "badge": "On-Location",
+    "message": "Bhiwandi based · On-location makeup services · Maharashtra travel enquiries subject to availability.",
+    "ctaText": "Enquire on WhatsApp"
+  },
+  "seo": {
+    "metaTitle": "Amrapali Makeover — Luxury Bridal & Editorial Beauty Artistry | Bhiwandi, Maharashtra",
+    "metaDescription": "Bespoke bridal, haldi, engagement, and party makeup by Amrapali in Bhiwandi, Maharashtra. Professional on-location beauty services customized for your special day.",
+    "ogTitle": "Amrapali Makeover — Luxury Bridal & Editorial Beauty Artistry",
+    "ogDescription": "Bespoke on-location bridal and celebration makeup artistry in Bhiwandi and across Maharashtra by Amrapali.",
+    "ogLocale": "en_IN"
+  },
+  "nav": {
+    "services": "Services",
+    "about": "About",
+    "process": "Booking Process",
+    "portfolio": "Portfolio",
+    "reviews": "Reviews",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "enquireButton": "Enquire via WhatsApp",
+    "menuOpen": "Open navigation menu",
+    "menuClose": "Close navigation menu",
+    "drawerTitle": "Navigation",
+    "selectLanguage": "Select language"
+  },
+  "hero": {
+    "eyebrow": "Luxury Bridal & Editorial Artistry",
+    "headlineLine1": "Timeless Elegance.",
+    "headlineLine2": "Crafted For Your Day.",
+    "subheadline": "Bespoke bridal, haldi, engagement, and celebration makeup designed to elevate your natural radiance. Delivered exclusively on-location across Maharashtra.",
+    "locationBadge": "Bhiwandi, Thane",
+    "travelNote": "Travel bookings considered across Maharashtra subject to date & availability",
+    "primaryCta": "Enquire on WhatsApp",
+    "secondaryCta": "Explore Portfolio",
+    "imageAlt": "Real bride showcasing bespoke bridal makeup and traditional Maharashtrian jewelry by Amrapali Makeover",
+    "imagePlaceholderLabel": "Genuine Bridal Artistry • On-Location Makeover",
+    "imagePlaceholderDimensions": "1179 × 1884 px (Original Format)",
+    "imagePlaceholderNotice": "Genuine client work by Amrapali Makeover. Photography courtesy of Pixeler Creative Service.",
+    "badgeOnLocation": "On-Location Service Only",
+    "badgeEnquiryOnly": "Enquiry-Based Customized Pricing",
+    "badgeServices": "4 Confirmed Services"
+  },
+  "languageSwitcher": {
+    "label": "Change language",
+    "currentLanguage": "English",
+    "en": "English",
+    "hi": "हिंदी",
+    "mr": "मराठी"
+  },
+  "footer": {
+    "description": "Bespoke bridal, haldi, engagement, and celebration makeup artistry delivered on-location across Maharashtra. Dedicated to enhancing natural grace with refined luxury.",
+    "quickLinksTitle": "Quick Links",
+    "servicesTitle": "Confirmed Services",
+    "contactTitle": "Direct Enquiries",
+    "callNow": "Direct Phone Call",
+    "whatsAppNow": "WhatsApp Message",
+    "instagramFollow": "Instagram Portfolio",
+    "locationLabel": "Base Location",
+    "copyrightText": "All rights reserved. Professional on-location makeup artist.",
+    "backToTop": "Back to top",
+    "enquiryOnlyDisclaimer": "Amrapali Makeover provides on-location services only. Quotations and dates are confirmed via WhatsApp enquiry subject to availability."
+  },
+  "floatingWhatsApp": {
+    "ariaLabel": "Chat on WhatsApp with Amrapali Makeover",
+    "tooltipText": "WhatsApp Enquiry",
+    "defaultMessage": "Hello Amrapali Makeover, I would like to enquire about your makeup services."
+  },
+  "services": {
+    "bridal": "Bridal Makeup",
+    "haldi": "Haldi Makeup",
+    "engagement": "Engagement Makeup",
+    "party": "Party Makeup"
+  },
+  "servicesSection": {
+    "eyebrow": "Confirmed Services",
+    "heading": "Bespoke Makeup Services for Special Occasions",
+    "subheadline": "On-location makeup services for weddings, celebrations, and special occasions. Travel enquiries across Maharashtra are considered subject to event date, location, and availability.",
+    "pricingNotice": "Enquiry-Based Pricing • On-Location Service Across Maharashtra",
+    "customQuoteNote": "Quotations are customized per event based on date, venue location, and event timing.",
+    "onLocationTag": "On-Location Service",
+    "enquiryOnlyTag": "Enquiry-Based Pricing",
+    "items": {
+      "bridal": {
+        "name": "Bridal Makeup",
+        "tagline": "Wedding Occasions",
+        "description": "Personalised bridal makeup artistry designed to accentuate your natural elegance and complement your traditional wedding attire and jewelry.",
+        "enquiryCta": "Enquire on WhatsApp",
+        "whatsAppMessage": "Hello Amrapali Makeover, I am interested in Bridal Makeup. Please share the details and availability.",
+        "imageAlt": "Bridal Makeup — Personalised bridal makeup artistry by Amrapali Makeover",
+        "placeholderLabel": "Illustrative Service Artwork"
+      },
+      "haldi": {
+        "name": "Haldi Makeup",
+        "tagline": "Haldi Celebrations",
+        "description": "Fresh, radiant, and celebration-ready makeup tailored specifically for lively Haldi ceremonies and pre-wedding morning traditions.",
+        "enquiryCta": "Enquire on WhatsApp",
+        "whatsAppMessage": "Hello Amrapali Makeover, I am interested in Haldi Makeup. Please share the details and availability.",
+        "imageAlt": "Haldi Makeup — Radiant festive makeup for Haldi ceremonies by Amrapali Makeover",
+        "placeholderLabel": "Illustrative Service Artwork"
+      },
+      "engagement": {
+        "name": "Engagement Makeup",
+        "tagline": "Engagement Occasions",
+        "description": "Sophisticated and personalized makeup for your engagement ceremony, harmonising timeless beauty with your contemporary celebration style.",
+        "enquiryCta": "Enquire on WhatsApp",
+        "whatsAppMessage": "Hello Amrapali Makeover, I am interested in Engagement Makeup. Please share the details and availability.",
+        "imageAlt": "Engagement Makeup — Sophisticated personalised engagement makeup by Amrapali Makeover",
+        "placeholderLabel": "Illustrative Service Artwork"
+      },
+      "party": {
+        "name": "Party Makeup",
+        "tagline": "Parties & Receptions",
+        "description": "Polished, long-wearing makeup artistry for family celebrations, evening receptions, festive gatherings, and special occasions.",
+        "enquiryCta": "Enquire on WhatsApp",
+        "whatsAppMessage": "Hello Amrapali Makeover, I am interested in Party Makeup. Please share the details and availability.",
+        "imageAlt": "Party Makeup — Professional party and celebration makeup by Amrapali Makeover",
+        "placeholderLabel": "Illustrative Service Artwork"
+      }
+    }
+  },
+  "about": {
+    "eyebrow": "About the Artist",
+    "heading": "Artistry Rooted in Elegance & Individuality",
+    "leadText": "Amrapali is a professional makeup artist based in Bhiwandi, Maharashtra. She offers personalised makeup services for bridal and other special occasions.",
+    "bioParagraph1": "With 1–3 years of professional experience, Amrapali focuses on enhancing each client’s unique features rather than applying one-size-fits-all looks. Every makeover is tailored to your occasion, personal style, and wedding theme.",
+    "bioParagraph2": "Operating exclusively on-location, she travels to client venues across Maharashtra (subject to date and availability), ensuring a calm, punctual, and attentive beauty experience on your most meaningful day.",
+    "experienceBadge": "1–3 Years Experience",
+    "experienceLabel": "Professional Artistry",
+    "locationBadge": "Based in Bhiwandi, Thane",
+    "locationQualifier": "On-Location Service Across Maharashtra",
+    "approachTitle": "Personalised Makeup Services",
+    "approachDescription": "Every face and occasion is unique. Bespoke consultations ensure your bridal, haldi, engagement, or party look feels authentically yours.",
+    "credentialsTitle": "Verified Professional Training",
+    "credentialsClassification": "Certificate of Participation",
+    "credentialsCourse": "Basic to Advance Diploma in Professional Makeup Artistry and Hairstyling",
+    "credentialsDuration": "One-Month Intensive Course",
+    "credentialsDate": "Completed May 2026",
+    "credentialsDescription": "Certificate of participation for completing a one-month Basic to Advance Diploma course in Professional Makeup Artistry and Hairstyling, May 2026.",
+    "viewCertificate": "Inspect Full Certificate",
+    "closeCertificate": "Close Certificate Viewer",
+    "certificateAlt": "Certificate of participation for Amrapali Vijay Bansode — Basic to Advance Diploma in Professional Makeup Artistry and Hairstyling, May 2026",
+    "portraitAlt": "Amrapali — Professional makeup artist based in Bhiwandi, Maharashtra",
+    "portraitPlaceholderLabel": "Artist Portrait Reserved",
+    "portraitPlaceholderSubtext": "Approved Studio Photography Coming Soon",
+    "enquireCta": "Enquire on WhatsApp",
+    "enquiryMessage": "Hello Amrapali Makeover, I would like to enquire about your bridal and special occasion makeup services."
+  },
+  "bookingProcess": {
+    "eyebrow": "Booking Process",
+    "heading": "Four Clear Steps to Reserve Your Date",
+    "subheadline": "Amrapali Makeover provides dedicated on-location artistry. Follow this simple process to check availability, discuss your preferences, and confirm your booking.",
+    "disclaimerNotice": "Sending a WhatsApp enquiry does not confirm a booking. Reservations are finalized only after dates and details are mutually agreed.",
+    "steps": {
+      "step1": {
+        "stepNumber": "Step 01",
+        "title": "Initial Enquiry",
+        "description": "Reach out to Amrapali on WhatsApp and share your occasion, event date, venue location, and preferred ready-by time.",
+        "details": [
+          "Occasion or service",
+          "Event date",
+          "Event location",
+          "Preferred ready-by time"
+        ]
+      },
+      "step2": {
+        "stepNumber": "Step 02",
+        "title": "Date & Location Check",
+        "description": "Amrapali personally reviews your requested date and venue location to verify schedule feasibility and travel practicality.",
+        "note": "Availability strictly depends on the event date, venue location, and existing schedule."
+      },
+      "step3": {
+        "stepNumber": "Step 03",
+        "title": "Style Consultation",
+        "description": "Discuss your preferred makeup look, outfit tones, jewelry style, and personal preferences to align on your vision.",
+        "note": "A personalized discussion to understand your unique aesthetic (no paid consultation required)."
+      },
+      "step4": {
+        "stepNumber": "Step 04",
+        "title": "Mutual Confirmation",
+        "description": "Your booking is considered confirmed only after all event details, schedule timing, and terms are mutually agreed directly with Amrapali.",
+        "notice": "A WhatsApp message alone does not confirm a booking."
+      }
+    },
+    "ctaTitle": "Ready to Plan Your Makeover?",
+    "ctaDescription": "Connect directly with Amrapali on WhatsApp to share your event details and check date availability.",
+    "ctaButton": "Enquire on WhatsApp",
+    "whatsAppMessage": "Hello Amrapali Makeover, I would like to check booking availability.\n\n- Occasion / Service:\n- Event Date:\n- Event Location:\n- Preferred Ready-by Time:"
+  },
+  "serviceArea": {
+    "eyebrow": "Service Coverage & Travel",
+    "heading": "On-Location Artistry Across Maharashtra",
+    "subheadline": "Based in Bhiwandi (Thane), Amrapali Makeover travels directly to your home, venue, or hotel. Travel enquiries across Maharashtra are considered subject to date, location, and schedule.",
+    "baseCardTitle": "Primary Service Base",
+    "baseCardLocation": "Bhiwandi, Thane, Maharashtra",
+    "baseCardDescription": "Amrapali is proudly based in Bhiwandi. Services are provided exclusively on-location at customer venues for a relaxed, personalized experience.",
+    "baseCardNote": "No customer storefront or home studio visits. All services take place at your selected event venue.",
+    "travelCardTitle": "Statewide Travel Enquiries",
+    "travelCardSubtitle": "Considered Across Maharashtra",
+    "travelCardDescription": "Bookings for destinations outside Bhiwandi are welcomed for review. Acceptance depends on event date, venue location, travel logistics, and availability.",
+    "travelCardCondition": "Availability is never unconditional. Early enquiry is strongly recommended for peak wedding dates.",
+    "travelCriteriaTitle": "How Travel Bookings Are Evaluated",
+    "travelCriteriaItems": [
+      "Event date and current schedule availability",
+      "Venue accessibility and travel practicality",
+      "Event timing and required ready-by schedule",
+      "Advance discussion and mutual confirmation"
+    ],
+    "outsideBhiwandiTitle": "Event Outside Bhiwandi?",
+    "outsideBhiwandiDescription": "Share your destination and event timing on WhatsApp to check if travel can be accommodated on your date.",
+    "outsideBhiwandiCta": "Enquire for Travel Booking",
+    "outsideBhiwandiWhatsAppMessage": "Hello Amrapali Makeover, I would like to enquire about an on-location booking outside Bhiwandi.\n\n- Event Location / City:\n- Event Date:\n- Occasion / Service:\n- Ready-by Time:"
+  },
+  "portfolioSection": {
+    "eyebrow": "Curated Portfolio",
+    "heading": "Genuine Artistry & Client Transformations",
+    "subheadline": "Explore authentic bridal makeup, celebration looks, and intricate hairstyling crafted by Amrapali for meaningful occasions.",
+    "filters": {
+      "all": "All Work",
+      "bridal": "Bridal",
+      "haldi": "Haldi",
+      "engagement": "Engagement",
+      "party": "Party",
+      "hairstyle": "Hairstyle"
+    },
+    "temporaryBadge": "Temporary Illustrative Image",
+    "temporaryNotice": "Temporary illustrative image — Approved Haldi client work will be added soon.",
+    "viewImage": "View full image",
+    "lightbox": {
+      "close": "Close preview (Esc)",
+      "previous": "Previous image",
+      "next": "Next image",
+      "counterOf": "of"
+    },
+    "video": {
+      "eyebrow": "Artistry in Motion",
+      "heading": "Bridal Transformation Reel",
+      "subheadline": "Experience genuine bridal styling and makeup precision in real-time motion.",
+      "badge": "Authentic Client Video",
+      "note": "Native controls available. Ambient audio track only; no spoken dialogue. Video plays muted by default."
+    },
+    "items": {
+      "bridal-0882": {
+        "title": "Traditional Bridal Artistry",
+        "alt": "Bridal makeup artistry by Amrapali Makeover featuring traditional jewelry and elegant bridal styling"
+      },
+      "bridal-0893": {
+        "title": "Signature Bridal Look",
+        "alt": "Signature bridal makeup look by Amrapali Makeover with ornate jewelry and red bridal veil"
+      },
+      "haldi-0882": {
+        "title": "Haldi Morning Ceremony (Illustrative Preview)",
+        "alt": "Temporary illustrative preview for Haldi makeup showcase — Client photography coming soon"
+      },
+      "haldi-0893": {
+        "title": "Haldi Celebration Look (Illustrative Preview)",
+        "alt": "Temporary illustrative preview for Haldi morning ceremony — Client photography coming soon"
+      },
+      "engagement-0881": {
+        "title": "Engagement Ceremony Makeup",
+        "alt": "Engagement ceremony makeup artistry by Amrapali Makeover"
+      },
+      "engagement-0889": {
+        "title": "Sophisticated Engagement Glamour",
+        "alt": "Sophisticated celebration makeup for engagement ceremony by Amrapali Makeover"
+      },
+      "engagement-0894": {
+        "title": "Contemporary Engagement Elegance",
+        "alt": "Elegantly finished engagement makeover by Amrapali Makeover"
+      },
+      "party-0886": {
+        "title": "Evening Reception Makeup",
+        "alt": "Party and evening reception makeup artistry by Amrapali Makeover"
+      },
+      "party-0888": {
+        "title": "Festive Celebration Glam",
+        "alt": "Celebration and festive party makeover with radiant finish by Amrapali Makeover"
+      },
+      "hairstyle-9148": {
+        "title": "Floral Bridal Braid",
+        "alt": "Intricate floral bridal hairstyling artistry by Amrapali Makeover"
+      },
+      "hairstyle-9441": {
+        "title": "Traditional Adorned Hairstyle",
+        "alt": "Ornate traditional wedding hairstyle with fresh jasmine and floral adornments by Amrapali Makeover"
+      }
+    }
+  },
+  "reviewsSection": {
+    "eyebrow": "Client Feedback",
+    "heading": "Client Experiences & Google Reviews",
+    "subheadline": "Read genuine reflections and customer feedback on our official Google Business Profile.",
+    "trustPillars": {
+      "verifiedTitle": "Public Google Reviews",
+      "verifiedDesc": "Customer feedback and ratings published publicly on Google. Visitors can read reviews directly on our official Google Business Profile.",
+      "transparentTitle": "Transparent & Independent",
+      "transparentDesc": "Every review is hosted independently on Google, providing complete transparency and authentic client perspectives.",
+      "occasionsTitle": "Bespoke Bridal & Events",
+      "occasionsDesc": "Travel enquiries across Maharashtra are considered subject to event date, location, travel logistics and availability."
+    },
+    "actionCard": {
+      "badge": "Official Google Business Profile",
+      "heading": "Read Customer Reviews on Google",
+      "description": "Visit our official Google Business Profile to view published client ratings, wedding photos, and firsthand feedback directly on Google Maps & Search.",
+      "readReviewsCta": "Read Reviews on Google",
+      "note": "Opens official Google listing in a new tab"
+    },
+    "complianceNotice": "Amrapali Makeover does not fabricate or modify customer feedback. All customer reviews are hosted publicly on our official Google Business Profile."
+  },
+  "faqSection": {
+    "eyebrow": "Frequently Asked Questions",
+    "heading": "Common Enquiries & Booking Details",
+    "subheadline": "Clear, honest answers to essential questions regarding our on-location services, travel availability, and enquiry process.",
+    "items": [
+      {
+        "id": "faq-services",
+        "question": "What makeup services does Amrapali Makeover offer?",
+        "answer": "Amrapali Makeover specializes exclusively in four bespoke on-location makeup services: Bridal Makeup, Haldi Makeup, Engagement Makeup, and Party Makeup. Every look is tailored to your personal style, skin tone, and outfit aesthetic."
+      },
+      {
+        "id": "faq-on-location",
+        "question": "Does Amrapali provide on-location makeup services?",
+        "answer": "Yes, absolutely. All makeup services are delivered entirely on-location at your chosen wedding venue, banquet hall, hotel, or residence. Amrapali does not operate a commercial salon or storefront."
+      },
+      {
+        "id": "faq-base-location",
+        "question": "Where is Amrapali Makeover based?",
+        "answer": "Amrapali Makeover is based in Bhiwandi, Thane District, Maharashtra, India. Services are provided across Bhiwandi and surrounding regions."
+      },
+      {
+        "id": "faq-travel",
+        "question": "Does the artist travel outside Bhiwandi?",
+        "answer": "Yes. Travel enquiries across Maharashtra are considered depending on the event date, venue location, travel logistics, and existing schedule availability. Travel bookings are evaluated on an individual enquiry basis."
+      },
+      {
+        "id": "faq-home-studio",
+        "question": "Do customers visit the artist's home or studio?",
+        "answer": "No. Amrapali operates strictly on-location at client venues. To preserve client comfort and artist privacy, clients do not visit the artist's private residence."
+      },
+      {
+        "id": "faq-pricing",
+        "question": "How can customers enquire about pricing?",
+        "answer": "All pricing is customized and enquiry-based depending on your occasion, event date, venue location, and requirements. You can enquire directly via WhatsApp at +91 83089 44456 for a personalized quotation."
+      },
+      {
+        "id": "faq-booking-process",
+        "question": "How does the booking process work?",
+        "answer": "The booking process involves four simple steps: 1) Send an initial enquiry with your occasion, date, venue location, and preferred ready-by time; 2) Date and location check by Amrapali; 3) Personal style consultation to discuss your vision; 4) Mutual confirmation once schedule feasibility and details are mutually agreed."
+      },
+      {
+        "id": "faq-whatsapp-confirmation",
+        "question": "Is a WhatsApp enquiry a confirmed booking?",
+        "answer": "No. An initial WhatsApp message does not guarantee or confirm a booking. An appointment is only confirmed once schedule feasibility is verified and all details are mutually finalized directly with Amrapali."
+      }
+    ],
+    "bottomCta": {
+      "title": "Have a specific question about your date?",
+      "description": "Amrapali is available on WhatsApp to discuss your wedding schedule, venue details, and service requirements.",
+      "buttonText": "Enquire on WhatsApp",
+      "whatsAppMessage": "Hello Amrapali, I have an enquiry regarding your makeup services."
+    }
+  },
+  "contactSection": {
+    "eyebrow": "Enquiry & Direct Contact",
+    "heading": "Plan Your Occasion with Amrapali",
+    "subheadline": "Share your event date and venue details to receive a customized quotation and check on-location schedule availability.",
+    "form": {
+      "title": "Send an On-Location Enquiry",
+      "subtitle": "Fill in your celebration details. Submitting opens a pre-formatted message in WhatsApp to connect directly with Amrapali.",
+      "fields": {
+        "name": {
+          "label": "Your Full Name",
+          "placeholder": "e.g. Priya Sharma",
+          "requiredError": "Please enter your name."
+        },
+        "phone": {
+          "label": "WhatsApp / Phone Number",
+          "placeholder": "e.g. 98200 12345 or +91 98200 12345",
+          "requiredError": "Please enter your phone number.",
+          "invalidError": "Please enter a valid 10-digit Indian phone number (e.g. 98200 12345 or +91 98200 12345).",
+          "helpText": "We use this number to personalize your WhatsApp enquiry."
+        },
+        "occasion": {
+          "label": "Select Occasion",
+          "placeholder": "Choose an occasion...",
+          "requiredError": "Please select the makeup occasion.",
+          "options": {
+            "bridal": "Bridal Makeup",
+            "haldi": "Haldi Makeup",
+            "engagement": "Engagement Makeup",
+            "party": "Party Makeup",
+            "other": "Other (Please specify)"
+          },
+          "otherLabel": "Specify Occasion",
+          "otherPlaceholder": "e.g. Reception, Baby Shower, Photoshoot, Family Event",
+          "otherRequiredError": "Please specify your occasion."
+        },
+        "eventDate": {
+          "label": "Event Date",
+          "placeholder": "DD/MM/YYYY",
+          "requiredError": "Please select your event date.",
+          "pastDateError": "Event date cannot be in the past."
+        },
+        "venue": {
+          "label": "Venue City or Area",
+          "placeholder": "e.g. Bhiwandi, Kalyan, Thane, Mumbai, or venue name",
+          "requiredError": "Please enter your event venue city or area.",
+          "helpText": "Services are delivered on-location at your venue."
+        },
+        "readyByTime": {
+          "label": "Preferred Ready-by Time",
+          "placeholder": "e.g. 10:00 AM or 5:30 PM",
+          "optionalBadge": "Optional"
+        },
+        "notes": {
+          "label": "Additional Notes or Requirements",
+          "placeholder": "e.g. Muhurat timing, draping assistance required, or family queries",
+          "optionalBadge": "Optional"
+        }
+      },
+      "submitButton": "Continue on WhatsApp",
+      "submittingButton": "Preparing WhatsApp Message...",
+      "disclosures": {
+        "opensWhatsApp": "Submitting opens WhatsApp with a pre-filled enquiry message.",
+        "noServerStorage": "This website does not store or transmit your form data to any server or database.",
+        "enquiryOnlyNotice": "Sending this message is an enquiry only and does not constitute a confirmed booking.",
+        "availabilityNote": "Dates, scheduling feasibility, and customized quotations are confirmed directly with Amrapali."
+      },
+      "submissionSuccessNotice": "WhatsApp was opened in a new tab with your pre-filled enquiry.",
+      "manualWhatsAppFallback": "If WhatsApp did not open automatically, click here to send directly.",
+      "messageTemplate": {
+        "greeting": "Hello Amrapali,",
+        "intro": "I would like to enquire about makeup services.",
+        "nameLabel": "Name",
+        "phoneLabel": "Phone",
+        "occasionLabel": "Occasion",
+        "dateLabel": "Event date",
+        "venueLabel": "Venue",
+        "readyByLabel": "Ready-by time",
+        "notesLabel": "Additional requirements",
+        "closing": "Please let me know your availability and quotation.",
+        "thanks": "Thank you."
+      }
+    },
+    "directCard": {
+      "badge": "Direct Contact",
+      "heading": "Direct Details & Schedule Checks",
+      "description": "Prefer to reach out directly? Connect with Amrapali via phone or WhatsApp for quick date availability checks.",
+      "artistLabel": "Makeup Artist",
+      "artistName": "Amrapali",
+      "baseLabel": "Base Location",
+      "baseLocation": "Bhiwandi, Thane, Maharashtra",
+      "serviceModeLabel": "Service Mode",
+      "serviceModeValue": "Exclusively On-Location at Your Venue",
+      "directCallLabel": "Call Directly: +91 83089 44456",
+      "whatsAppChatLabel": "WhatsApp: +91 83089 44456",
+      "instagramLabel": "Instagram: @amrapali_makeover_139",
+      "noStudioNotice": "Amrapali provides on-location services only. To protect client privacy, customers do not visit the artist's private residence."
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "brand": {
+    "name": "Amrapali Makeover",
+    "legalName": "Amrapali Makeover",
+    "businessType": "Individual makeup artist",
+    "tagline": "Luxury Bridal & Editorial Beauty Artistry"
+  },
+  "location": {
+    "city": "Bhiwandi",
+    "district": "Thane",
+    "state": "Maharashtra",
+    "country": "India",
+    "displayLocation": "Bhiwandi, Thane, Maharashtra",
+    "hasCustomerStorefront": false,
+    "serviceDeliveryMode": "on_location",
+    "travelQualifier": "On-location services based in Bhiwandi; travel enquiries considered across Maharashtra subject to date and availability."
+  },
+  "contact": {
+    "displayPhone": "+91 83089 44456",
+    "rawPhone": "918308944456",
+    "whatsAppUrl": "https://wa.me/918308944456",
+    "directPhoneTel": "tel:+918308944456"
+  },
+  "social": {
+    "instagramHandle": "@amrapali_makeover_139",
+    "instagramUrl": "https://www.instagram.com/amrapali_makeover_139/",
+    "facebookUrl": null
+  },
+  "reviews": {
+    "googleBusinessUrl": "https://share.google/LOT7Ne1J7AtzPkc54",
+    "hasVerifiedListing": true
+  },
+  "seo": {
+    "siteUrl": "https://amrapalimakeover.in",
+    "intendedDomain": "amrapalimakeover.in",
+    "isDomainPurchased": false,
+    "isDomainVerified": false,
+    "domainStatus": "Planned production domain (unpurchased, unverified pending owner acquisition)",
+    "defaultOgImage": "/images/hero/hero-bridal-0893.jpg",
+    "themeColor": "#2A1420"
+  },
+  "pricing": {
+    "mode": "enquiry_only",
+    "disclaimer": "All quotations are customized and enquiry-based depending on occasion, date, location, and service requirements."
+  },
+  "services": [
+    {
+      "id": "bridal",
+      "name": "Bridal Makeup",
+      "category": "Bridal Artistry",
+      "enquiryContext": "Bridal Makeup Enquiry"
+    },
+    {
+      "id": "haldi",
+      "name": "Haldi Makeup",
+      "category": "Pre-Wedding Ceremony",
+      "enquiryContext": "Haldi Makeup Enquiry"
+    },
+    {
+      "id": "engagement",
+      "name": "Engagement Makeup",
+      "category": "Celebration Artistry",
+      "enquiryContext": "Engagement Makeup Enquiry"
+    },
+    {
+      "id": "party",
+      "name": "Party Makeup",
+      "category": "Special Event Glam",
+      "enquiryContext": "Party Makeup Enquiry"
+    }
+  ]
+}

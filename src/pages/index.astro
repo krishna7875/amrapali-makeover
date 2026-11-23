@@ -1,0 +1,22 @@
+---
+// Static root redirect to default locale /en/
+import business from '../utils/business';
+const canonicalUrl = `${business.seo.siteUrl}/en/`;
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content="0;url=/en/" />
+    <meta name="robots" content="noindex" />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Amrapali Makeover — Redirecting to /en/</title>
+    <script is:inline>
+      window.location.replace("/en/");
+    </script>
+  </head>
+  <body class="bg-[#FBF8F4] text-[#24191B] font-sans p-8">
+    <p>Redirecting to <a href="/en/" class="text-[#4B1728] underline">Amrapali Makeover (English)</a>...</p>
+  </body>
+</html>

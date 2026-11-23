@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { StyleguideView } from '../components/styleguide/StyleguideView';
+import business from '../utils/business';
+
+const canonicalUrl = `${business.seo.siteUrl}/styleguide/`;
+---
+
+<BaseLayout 
+  title="Amrapali Makeover — Design System & Style Guide" 
+  description="Phase 1 Design System, Tokens, Typography, and UI Primitives for Amrapali Makeover."
+  canonicalUrl={canonicalUrl}
+  robots="noindex, nofollow"
+  hasLanguageAlternates={false}
+  isHomePage={false}
+>
+  <StyleguideView client:load />
+</BaseLayout>

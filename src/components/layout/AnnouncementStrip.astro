@@ -1,0 +1,41 @@
+---
+import { getTranslations } from '../../utils/i18n';
+import business, { buildWhatsAppUrl } from '../../utils/business';
+
+interface Props {
+  lang: string;
+}
+
+const { lang } = Astro.props;
+const t = getTranslations(lang);
+const whatsAppHref = buildWhatsAppUrl(business.contact.rawPhone, t.floatingWhatsApp.defaultMessage);
+---
+
+<aside 
+  aria-label="Announcement"
+  class="bg-[#2A1420] text-[#FBF8F4] text-xs py-2 px-3 sm:px-4 border-b border-[#3D1F30] relative z-40 transition-colors overflow-hidden"
+>
+  <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-1.5 sm:gap-2 text-center sm:text-left">
+    <div class="flex flex-wrap items-center justify-center sm:justify-start gap-1.5 sm:gap-2 mx-auto sm:mx-0">
+      <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold tracking-wider uppercase bg-[#B99561]/20 text-[#D4B98E] border border-[#B99561]/40 shrink-0">
+        {t.announcement.badge}
+      </span>
+      <span class="text-[#DFC8C2] font-normal tracking-wide text-[11px] sm:text-xs leading-normal">
+        {t.announcement.message}
+      </span>
+    </div>
+
+    <div class="hidden md:flex items-center gap-4 text-[11px] text-[#DFC8C2]">
+      <span>{business.location.displayLocation}</span>
+      <span class="text-[#B99561]">&bull;</span>
+      <a 
+        href={whatsAppHref}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-[#D4B98E] hover:text-[#FBF8F4] underline underline-offset-2 transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B99561]"
+      >
+        {t.announcement.ctaText} &rarr;
+      </a>
+    </div>
+  </div>
+</aside>

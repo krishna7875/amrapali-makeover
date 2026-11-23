@@ -1,0 +1,221 @@
+---
+import { getTranslations, type Locale } from '../../utils/i18n';
+import business, { buildWhatsAppUrl } from '../../utils/business';
+import { ArrowDownRight, MapPin, Sparkles, CheckCircle2 } from 'lucide-react';
+import { WhatsAppIcon } from '../ui/Icons';
+
+interface Props {
+  lang: string;
+}
+
+const { lang } = Astro.props;
+const currentLang = (lang as Locale) || 'en';
+const t = getTranslations(currentLang);
+const homeUrl = `/${currentLang}/`;
+const whatsAppHref = buildWhatsAppUrl(business.contact.rawPhone, t.floatingWhatsApp.defaultMessage);
+---
+
+<section
+  id="hero"
+  aria-labelledby="hero-title"
+  class="relative overflow-hidden bg-[#FBF8F4] pt-8 sm:pt-12 lg:pt-16 pb-16 sm:pb-20 lg:pb-28 border-b border-[#DFC8C2]/60"
+>
+  <!-- Ambient Editorial Background Gradients (Subtle & Restrained) -->
+  <div
+    class="pointer-events-none absolute -top-32 -left-32 w-96 h-96 rounded-full bg-[#F2E5E2]/60 blur-3xl"
+    aria-hidden="true"
+  />
+  <div
+    class="pointer-events-none absolute top-1/2 -right-32 w-80 h-80 rounded-full bg-[#B99561]/10 blur-3xl"
+    aria-hidden="true"
+  />
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+      
+      <!-- ===================================================================
+           Left Column: Editorial Typography, Narrative, & Dual CTAs (7 Cols)
+           =================================================================== -->
+      <div class="lg:col-span-7 flex flex-col items-start text-left hero-content-entrance">
+        
+        <!-- Eyebrow Badge -->
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-[4px] bg-[#F2E5E2] border border-[#DFC8C2] text-[#4B1728] text-xs font-medium tracking-wide mb-5 shadow-xs">
+          <Sparkles className="w-3.5 h-3.5 text-[#B99561] shrink-0" aria-hidden="true" />
+          <span>{t.hero.eyebrow}</span>
+        </div>
+
+        <!-- Main Display Headline -->
+        <h1
+          id="hero-title"
+          class="font-serif text-3xl sm:text-5xl md:text-5xl lg:text-6xl font-medium tracking-tight text-[#2A1420] leading-[1.12] mb-4 text-balance"
+        >
+          <span class="block text-[#2A1420]">{t.hero.headlineLine1}</span>
+          <span class="block text-[#4B1728] mt-1 italic sm:not-italic font-serif">
+            {t.hero.headlineLine2}
+          </span>
+        </h1>
+
+        <!-- Persuasive Subheadline / Value Proposition -->
+        <p class="text-sm sm:text-base lg:text-lg text-[#524245] leading-relaxed max-w-xl mb-6">
+          {t.hero.subheadline}
+        </p>
+
+        <!-- Location & On-Location Service Qualifier Box -->
+        <div class="w-full max-w-xl p-3.5 sm:p-4 rounded-[6px] bg-white border border-[#DFC8C2] shadow-xs mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 sm:gap-4">
+          <div class="flex items-start gap-2.5 min-w-0">
+            <MapPin className="w-4 h-4 text-[#B99561] shrink-0 mt-0.5" aria-hidden="true" />
+            <div class="text-xs text-[#24191B] leading-snug">
+              <span class="font-semibold text-[#4B1728] block sm:inline">
+                {t.hero.locationBadge}:
+              </span>{' '}
+              <span class="text-[#524245]">
+                {t.hero.travelNote}
+              </span>
+            </div>
+          </div>
+          <span class="self-start sm:self-auto shrink-0 inline-flex items-center px-2 py-0.5 rounded text-[10px] font-semibold tracking-wider uppercase bg-[#B99561]/15 text-[#4B1728] border border-[#B99561]/30">
+            {t.common.onLocationService}
+          </span>
+        </div>
+
+        <!-- Dual Calls to Action -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto mb-8">
+          <!-- Primary CTA: WhatsApp Enquiry -->
+          <a
+            href={whatsAppHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center font-medium transition-all duration-200 cursor-pointer select-none rounded-[4px] bg-[#4B1728] text-[#FBF8F4] border border-[#4B1728] hover:bg-[#642037] hover:border-[#642037] active:bg-[#37101D] shadow-[0_4px_14px_-2px_rgba(75,23,40,0.35)] text-sm px-6 py-3.5 gap-2.5 uppercase tracking-wider font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B99561] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FBF8F4] w-full sm:w-auto text-center"
+          >
+            <WhatsAppIcon className="w-4 h-4 shrink-0" aria-hidden="true" />
+            <span>{t.hero.primaryCta}</span>
+          </a>
+
+          <!-- Secondary CTA: Explore Portfolio -->
+          <a
+            href={`${homeUrl}#portfolio`}
+            class="inline-flex items-center justify-center font-medium transition-all duration-200 cursor-pointer select-none rounded-[4px] bg-white text-[#24191B] border border-[#DFC8C2] hover:bg-[#F2E5E2] hover:border-[#C58F91] hover:text-[#4B1728] active:bg-[#EADBD7] text-sm px-6 py-3.5 gap-2 uppercase tracking-wider font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B99561] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FBF8F4] w-full sm:w-auto text-center"
+          >
+            <span>{t.hero.secondaryCta}</span>
+            <ArrowDownRight className="w-4 h-4 text-[#B99561] shrink-0" aria-hidden="true" />
+          </a>
+        </div>
+
+        <!-- Verified Micro-Trust Features -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-4 pt-4 border-t border-[#DFC8C2]/70 w-full max-w-xl text-left text-xs text-[#524245]">
+          <div class="flex items-center gap-1.5">
+            <CheckCircle2 className="w-3.5 h-3.5 text-[#B99561] shrink-0" aria-hidden="true" />
+            <span class="font-medium text-[#24191B]">{t.hero.badgeOnLocation}</span>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <CheckCircle2 className="w-3.5 h-3.5 text-[#B99561] shrink-0" aria-hidden="true" />
+            <span class="font-medium text-[#24191B]">{t.hero.badgeEnquiryOnly}</span>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <CheckCircle2 className="w-3.5 h-3.5 text-[#B99561] shrink-0" aria-hidden="true" />
+            <span class="font-medium text-[#24191B]">{t.hero.badgeServices}</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ===================================================================
+           Right Column: Editorial Portrait Frame & Genuine Photography (5 Cols)
+           =================================================================== -->
+      <div class="lg:col-span-5 relative w-full max-w-md mx-auto lg:max-w-none hero-image-entrance">
+        
+        <div class="relative">
+          <!-- Asymmetrical Offset Decorative Background Frame (Framing Portrait Only) -->
+          <div
+            class="hidden sm:block absolute -inset-2 sm:-inset-2.5 bg-[#F2E5E2] border border-[#DFC8C2] rounded-[4px] -rotate-1 pointer-events-none shadow-xs"
+            aria-hidden="true"
+          />
+
+          <!-- Image Container with strict 4:5 aspect ratio and double border -->
+          <div class="relative rounded-[4px] overflow-hidden bg-[#2A1420] border-2 border-[#B99561]/50 shadow-xl aspect-4/5">
+            <img
+              src="/images/hero/hero-bridal-0893.jpg"
+              alt={t.hero.imageAlt}
+              width="1179"
+              height="1884"
+              fetchpriority="high"
+              loading="eager"
+              decoding="async"
+              class="w-full h-full object-cover object-top select-none"
+            />
+
+            <!-- Floating Editorial Badge at bottom of Portrait -->
+            <div class="absolute inset-x-3 bottom-3 sm:inset-x-4 sm:bottom-4 p-2.5 sm:p-3 rounded-[4px] bg-[#2A1420]/90 backdrop-blur-sm border border-[#B99561]/60 text-left shadow-lg">
+              <div class="flex items-center justify-between gap-2 border-b border-[#3D1F30] pb-1 mb-1">
+                <span class="font-serif text-xs sm:text-sm font-medium text-[#FBF8F4] tracking-tight">
+                  {t.common.brandName}
+                </span>
+                <span class="text-[9px] uppercase tracking-wider text-[#B99561] font-semibold">
+                  {business.location.displayLocation}
+                </span>
+              </div>
+              <p class="text-[10px] text-[#DFC8C2] leading-tight">
+                {t.services.bridal} &bull; {t.services.haldi} &bull; {t.services.engagement} &bull; {t.services.party}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Authentic Artistry Attribution Caption -->
+        <div class="mt-3 text-center sm:text-right">
+          <span class="inline-flex items-center gap-1.5 text-[10px] font-medium text-[#74686A]">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#B99561] shrink-0" aria-hidden="true"></span>
+            <span>{t.hero.imagePlaceholderLabel}</span>
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ==========================================================================
+     Editorial Motion & Transitions (Graceful & Restrained)
+     ========================================================================== */
+  @keyframes heroFadeUp {
+    0% {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes heroImageReveal {
+    0% {
+      opacity: 0;
+      transform: scale(0.985);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .hero-content-entrance {
+    animation: heroFadeUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .hero-image-entrance {
+    animation: heroImageReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+  }
+
+  /* Strict Reduced-Motion Compliance */
+  @media (prefers-reduced-motion: reduce) {
+    .hero-content-entrance,
+    .hero-image-entrance {
+      animation: none !important;
+      transform: none !important;
+      opacity: 1 !important;
+    }
+  }
+</style>

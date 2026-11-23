@@ -1,0 +1,28 @@
+---
+import { HeaderNavigation } from './HeaderNavigation';
+import { getTranslations, type Locale } from '../../utils/i18n';
+import business from '../../utils/business';
+
+interface Props {
+  lang: string;
+}
+
+const { lang } = Astro.props;
+const currentLang = (lang as Locale) || 'en';
+const t = getTranslations(currentLang);
+const currentPathname = Astro.url.pathname;
+---
+
+<header 
+  class="sticky top-0 z-40 bg-[#FBF8F4]/90 backdrop-blur-md border-b border-[#DFC8C2]/80 transition-all duration-200"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 py-3.5 sm:py-4">
+    <HeaderNavigation
+      client:load
+      currentLang={currentLang}
+      currentPathname={currentPathname}
+      translations={t}
+      business={business}
+    />
+  </div>
+</header>

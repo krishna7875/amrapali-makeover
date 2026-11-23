@@ -1,0 +1,203 @@
+---
+import '../styles/global.css';
+import business from '../utils/business';
+
+interface Props {
+  title?: string;
+  description?: string;
+  lang?: string;
+  canonicalUrl?: string;
+  ogType?: string;
+  ogImage?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogLocale?: string;
+  robots?: string;
+  isHomePage?: boolean;
+  hasLanguageAlternates?: boolean;
+}
+
+const {
+  title = `${business.brand.name} — ${business.brand.tagline}`,
+  description = business.brand.tagline,
+  lang = 'en',
+  canonicalUrl,
+  ogType = 'website',
+  ogImage = business.seo.defaultOgImage,
+  ogTitle,
+  ogDescription,
+  ogLocale = 'en_IN',
+  robots = 'index, follow',
+  isHomePage = false,
+  hasLanguageAlternates = false,
+} = Astro.props;
+
+const siteUrl = business.seo.siteUrl;
+const effectiveCanonical = canonicalUrl || `${siteUrl}/${lang}/`;
+const absoluteOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
+
+// Schema.org structured data for homepage
+const structuredData = isHomePage
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'BeautySalon',
+      '@id': `${siteUrl}/#business`,
+      name: business.brand.name,
+      description: 'Bespoke bridal, haldi, engagement, and party makeup artistry based in Bhiwandi, Maharashtra. Professional on-location services delivered at client venues.',
+      telephone: business.contact.displayPhone,
+      url: siteUrl,
+      image: `${siteUrl}${business.seo.defaultOgImage}`,
+      priceRange: '₹₹',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: business.location.city,
+        addressRegion: business.location.state,
+        addressCountry: 'IN',
+      },
+      areaServed: [
+        {
+          '@type': 'City',
+          name: business.location.city,
+        },
+        {
+          '@type': 'AdministrativeArea',
+          name: 'Thane District',
+        },
+        {
+          '@type': 'AdministrativeArea',
+          name: 'Maharashtra',
+        },
+      ],
+      sameAs: [
+        business.social.instagramUrl,
+        business.reviews.googleBusinessUrl,
+      ].filter(Boolean),
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Makeup Artistry Services',
+        itemListElement: [
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Bridal Makeup',
+              description: 'Comprehensive bridal makeover customized to bridal attire, jewelry, and personal aesthetic.',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Haldi Makeup',
+              description: 'Fresh, radiant, and ceremony-ready beauty styling designed for daytime events.',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Engagement Makeup',
+              description: 'Refined elegance tailored for engagement rituals, lighting, and photography.',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Party Makeup',
+              description: 'Elevated occasion styling for celebrations, receptions, and milestone events.',
+            },
+          },
+        ],
+      },
+    }
+  : null;
+---
+
+<!doctype html>
+<html lang={lang} class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content={robots} />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content={business.seo.themeColor} />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={effectiveCanonical} />
+
+    <!-- Localized Language Alternates (hreflang) -->
+    {hasLanguageAlternates && (
+      <>
+        <link rel="alternate" hreflang="en" href={`${siteUrl}/en/`} />
+        <link rel="alternate" hreflang="hi" href={`${siteUrl}/hi/`} />
+        <link rel="alternate" hreflang="mr" href={`${siteUrl}/mr/`} />
+        <link rel="alternate" hreflang="x-default" href={`${siteUrl}/en/`} />
+      </>
+    )}
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:site_name" content={business.brand.name} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:title" content={ogTitle || title} />
+    <meta property="og:description" content={ogDescription || description} />
+    <meta property="og:url" content={effectiveCanonical} />
+    <meta property="og:image" content={absoluteOgImage} />
+    <meta property="og:locale" content={ogLocale} />
+    {ogLocale === 'en_IN' && (
+      <>
+        <meta property="og:locale:alternate" content="hi_IN" />
+        <meta property="og:locale:alternate" content="mr_IN" />
+      </>
+    )}
+    {ogLocale === 'hi_IN' && (
+      <>
+        <meta property="og:locale:alternate" content="en_IN" />
+        <meta property="og:locale:alternate" content="mr_IN" />
+      </>
+    )}
+    {ogLocale === 'mr_IN' && (
+      <>
+        <meta property="og:locale:alternate" content="en_IN" />
+        <meta property="og:locale:alternate" content="hi_IN" />
+      </>
+    )}
+
+    <!-- Twitter / X Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={ogTitle || title} />
+    <meta name="twitter:description" content={ogDescription || description} />
+    <meta name="twitter:image" content={absoluteOgImage} />
+
+    <!-- Critical Performance Preload for Hero Image -->
+    {isHomePage && (
+      <link
+        rel="preload"
+        as="image"
+        href="/images/hero/hero-bridal-0893.jpg"
+        fetchpriority="high"
+      />
+    )}
+
+    <!-- Google Fonts Preconnect & Font Loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Serif+Devanagari:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Rozha+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Structured Data (JSON-LD) -->
+    {structuredData && (
+      <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+    )}
+  </head>
+  <body class="min-h-screen bg-[#FBF8F4] text-[#24191B] font-sans antialiased selection:bg-[#E4D0CB] selection:text-[#2A1420] overflow-x-hidden">
+    <slot />
+  </body>
+</html>

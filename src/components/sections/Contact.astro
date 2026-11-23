@@ -1,0 +1,175 @@
+---
+import { getTranslations, type Locale } from '../../utils/i18n';
+import business, { buildWhatsAppUrl } from '../../utils/business';
+import { ContactForm } from '../ui/ContactForm';
+import { Sparkles, Phone, MapPin, User, Sparkle } from 'lucide-react';
+import { InstagramIcon, WhatsAppIcon } from '../ui/Icons';
+
+interface Props {
+  lang: string;
+}
+
+const { lang } = Astro.props;
+const currentLang = (lang as Locale) || 'en';
+const t = getTranslations(currentLang);
+
+const whatsAppUrl = buildWhatsAppUrl(
+  business.contact.rawPhone,
+  t.floatingWhatsApp.defaultMessage
+);
+---
+
+<section
+  id="contact"
+  aria-labelledby="contact-title"
+  class="relative overflow-hidden bg-[#FBF8F4] py-16 sm:py-20 lg:py-28 border-b border-[#DFC8C2]/70 section-anchor scroll-mt-5 sm:scroll-mt-8 lg:scroll-mt-0"
+>
+  <!-- Ambient Background Gradients -->
+  <div
+    class="pointer-events-none absolute top-12 -left-40 w-96 h-96 rounded-full bg-[#F2E5E2]/60 blur-3xl"
+    aria-hidden="true"
+  />
+  <div
+    class="pointer-events-none absolute bottom-12 -right-40 w-96 h-96 rounded-full bg-[#B99561]/10 blur-3xl"
+    aria-hidden="true"
+  />
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12 sm:space-y-16">
+    
+    <!-- Section Header -->
+    <div class="max-w-3xl">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-[4px] bg-[#F2E5E2] border border-[#DFC8C2] text-[#4B1728] text-xs font-medium tracking-wide mb-4 shadow-xs">
+        <Sparkles className="w-3.5 h-3.5 text-[#B99561] shrink-0" aria-hidden="true" />
+        <span>{t.contactSection.eyebrow}</span>
+      </div>
+
+      <h2
+        id="contact-title"
+        class="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-[#2A1420] leading-[1.18] text-balance mb-4"
+      >
+        {t.contactSection.heading}
+      </h2>
+
+      <p class="text-base sm:text-lg text-[#524245] leading-relaxed font-normal">
+        {t.contactSection.subheadline}
+      </p>
+    </div>
+
+    <!-- Main Grid: Enquiry Form (Left 7 Cols) + Direct Details Card (Right 5 Cols) -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+      
+      <!-- Left Column: Interactive Enquiry Form -->
+      <div class="lg:col-span-7">
+        <ContactForm 
+          client:load 
+          translations={t.contactSection.form} 
+          businessPhone={business.contact.rawPhone} 
+        />
+      </div>
+
+      <!-- Right Column: Direct Contact Details & Information Card -->
+      <div class="lg:col-span-5 space-y-6">
+        
+        <div class="rounded-[8px] bg-[#2A1420] text-[#FBF8F4] border-2 border-[#B99561]/60 p-6 sm:p-8 shadow-xl relative overflow-hidden text-left space-y-6">
+          
+          <!-- Subtle Glow in Card -->
+          <div 
+            class="pointer-events-none absolute -top-20 -right-20 w-64 h-64 rounded-full bg-[#B99561]/15 blur-3xl" 
+            aria-hidden="true" 
+          />
+
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-[3px] bg-[#B99561]/20 border border-[#B99561]/40 text-[#D4B98E] text-[10px] uppercase font-semibold tracking-wider">
+            <Sparkle className="w-3 h-3 text-[#B99561] shrink-0" aria-hidden="true" />
+            <span>{t.contactSection.directCard.badge}</span>
+          </div>
+
+          <div>
+            <h3 class="font-serif text-2xl sm:text-3xl font-medium text-[#FBF8F4] leading-tight">
+              {t.contactSection.directCard.heading}
+            </h3>
+            <p class="text-xs sm:text-sm text-[#DFC8C2] mt-2 leading-relaxed">
+              {t.contactSection.directCard.description}
+            </p>
+          </div>
+
+          <!-- Structured Info List -->
+          <div class="space-y-4 pt-2 border-t border-[#3D1F30] text-xs text-[#DFC8C2]">
+            
+            <div class="flex items-start gap-3">
+              <User className="w-4 h-4 text-[#B99561] shrink-0 mt-0.5" aria-hidden="true" />
+              <div>
+                <p class="text-[10px] uppercase tracking-wider text-[#A19597]">{t.contactSection.directCard.artistLabel}</p>
+                <p class="font-medium text-[#FBF8F4] text-sm">{t.contactSection.directCard.artistName}</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <MapPin className="w-4 h-4 text-[#B99561] shrink-0 mt-0.5" aria-hidden="true" />
+              <div>
+                <p class="text-[10px] uppercase tracking-wider text-[#A19597]">{t.contactSection.directCard.baseLabel}</p>
+                <p class="font-medium text-[#FBF8F4] text-sm">{t.contactSection.directCard.baseLocation}</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <Sparkles className="w-4 h-4 text-[#B99561] shrink-0 mt-0.5" aria-hidden="true" />
+              <div>
+                <p class="text-[10px] uppercase tracking-wider text-[#A19597]">{t.contactSection.directCard.serviceModeLabel}</p>
+                <p class="font-medium text-[#FBF8F4] text-sm">{t.contactSection.directCard.serviceModeValue}</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Direct CTAs -->
+          <div class="pt-4 space-y-3">
+            
+            {/* Primary WhatsApp Action */}
+            <a
+              href={whatsAppUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-full inline-flex items-center justify-center gap-2.5 px-5 py-3 rounded-[4px] bg-[#B99561] hover:bg-[#C9A672] text-[#2A1420] text-xs sm:text-sm font-semibold transition-all duration-200 shadow-md hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FBF8F4]"
+            >
+              <WhatsAppIcon className="w-4 h-4 shrink-0" aria-hidden="true" />
+              <span>{t.contactSection.directCard.whatsAppChatLabel}</span>
+            </a>
+
+            {/* Direct Phone Call */}
+            <a
+              href={business.contact.directPhoneTel}
+              class="w-full inline-flex items-center justify-center gap-2.5 px-5 py-3 rounded-[4px] bg-white/10 hover:bg-white/15 text-[#FBF8F4] border border-[#B99561]/40 text-xs sm:text-sm font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B99561]"
+            >
+              <Phone className="w-4 h-4 text-[#DFC8C2]" aria-hidden="true" />
+              <span>{t.contactSection.directCard.directCallLabel}</span>
+            </a>
+
+            {/* Instagram Link */}
+            <a
+              href={business.social.instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-full inline-flex items-center justify-center gap-2.5 px-5 py-2.5 rounded-[4px] bg-transparent hover:bg-white/5 text-[#DFC8C2] hover:text-[#FBF8F4] text-xs font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B99561]"
+            >
+              <InstagramIcon className="w-4 h-4 text-[#B99561]" />
+              <span>{t.contactSection.directCard.instagramLabel}</span>
+            </a>
+
+          </div>
+
+          {/* Privacy & No Studio Notice */}
+          <div class="pt-2 border-t border-[#3D1F30]">
+            <p class="text-[11px] text-[#DFC8C2]/70 leading-relaxed italic">
+              {t.contactSection.directCard.noStudioNotice}
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>

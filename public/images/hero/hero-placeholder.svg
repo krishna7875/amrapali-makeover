@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" fill="none">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2A1420" />
+      <stop offset="45%" stop-color="#3D1F30" />
+      <stop offset="100%" stop-color="#1E0D16" />
+    </linearGradient>
+
+    <!-- Champagne Gold Accent Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4B98E" />
+      <stop offset="50%" stop-color="#B99561" />
+      <stop offset="100%" stop-color="#977643" />
+    </linearGradient>
+
+    <!-- Soft Vignette / Radial Glow -->
+    <radialGradient id="centerGlow" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#4B1728" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#1E0D16" stop-opacity="0.95" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="800" height="1000" fill="url(#bgGrad)" />
+  <rect width="800" height="1000" fill="url(#centerGlow)" />
+
+  <!-- Outer Editorial Margin Frame -->
+  <rect x="24" y="24" width="752" height="952" stroke="#B99561" stroke-opacity="0.3" stroke-width="1.5" />
+  <rect x="34" y="34" width="732" height="932" stroke="#DFC8C2" stroke-opacity="0.2" stroke-width="0.75" />
+
+  <!-- Corner Filigree Accents -->
+  <!-- Top Left -->
+  <path d="M44 64 V44 H64" stroke="url(#goldGrad)" stroke-width="2" />
+  <circle cx="44" cy="44" r="3" fill="#D4B98E" />
+  <!-- Top Right -->
+  <path d="M756 64 V44 H736" stroke="url(#goldGrad)" stroke-width="2" />
+  <circle cx="756" cy="44" r="3" fill="#D4B98E" />
+  <!-- Bottom Left -->
+  <path d="M44 936 V956 H64" stroke="url(#goldGrad)" stroke-width="2" />
+  <circle cx="44" cy="956" r="3" fill="#D4B98E" />
+  <!-- Bottom Right -->
+  <path d="M756 936 V956 H736" stroke="url(#goldGrad)" stroke-width="2" />
+  <circle cx="756" cy="956" r="3" fill="#D4B98E" />
+
+  <!-- Center Decorative Silhouette Motif (Editorial Bridal Portrait Placeholder) -->
+  <g transform="translate(400, 360)">
+    <!-- Decorative Halo Ring -->
+    <circle cx="0" cy="0" r="160" stroke="#B99561" stroke-opacity="0.25" stroke-width="1" stroke-dasharray="4 4" />
+    <circle cx="0" cy="0" r="140" stroke="url(#goldGrad)" stroke-opacity="0.4" stroke-width="1.5" />
+
+    <!-- Stylized Bridal Arch / Silhouette Outline -->
+    <path d="M-80,120 C-80,40 -60,-60 0,-100 C60,-60 80,40 80,120 Z" fill="#24191B" fill-opacity="0.4" stroke="#D4B98E" stroke-width="1.5" stroke-opacity="0.5" />
+    <!-- Maang Tikka & Crown Motif -->
+    <circle cx="0" cy="-60" r="8" fill="url(#goldGrad)" />
+    <path d="M0,-100 V-68" stroke="#D4B98E" stroke-width="2" />
+    <!-- Delicate Pendant Drop -->
+    <path d="M0,-52 L0,-40" stroke="#D4B98E" stroke-width="1.5" />
+    <circle cx="0" cy="-38" r="3" fill="#FBF8F4" />
+    
+    <!-- Bridal Dupatta Drape Curves -->
+    <path d="M-60,30 C-30,70 30,70 60,30" stroke="#C58F91" stroke-opacity="0.5" stroke-width="1.5" fill="none" />
+    <path d="M-90,130 C-40,80 40,80 90,130" stroke="url(#goldGrad)" stroke-opacity="0.4" stroke-width="1.5" fill="none" />
+  </g>
+
+  <!-- Editorial Placeholder Typography & Specifications -->
+  <!-- Brand Heading -->
+  <text x="400" y="580" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="34" font-weight="500" fill="#FBF8F4" letter-spacing="2">
+    AMRAPALI MAKEOVER
+  </text>
+  <text x="400" y="612" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="600" fill="#B99561" letter-spacing="4">
+    LUXURY BRIDAL ARTISTRY
+  </text>
+
+  <!-- Divider Line -->
+  <line x1="320" y1="640" x2="480" y2="640" stroke="#B99561" stroke-opacity="0.4" stroke-width="1" />
+  <circle cx="400" cy="640" r="3" fill="#D4B98E" />
+
+  <!-- Placeholder Badge -->
+  <rect x="230" y="665" width="340" height="32" rx="4" fill="#4B1728" fill-opacity="0.8" stroke="#B99561" stroke-width="1" />
+  <text x="400" y="686" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="600" fill="#FBF8F4" letter-spacing="1.5">
+    PORTRAIT PHOTOGRAPHY RESERVED
+  </text>
+
+  <!-- Technical Dimensions & Crop Specs -->
+  <text x="400" y="735" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="500" fill="#DFC8C2">
+    Target Dimensions: 800 × 1000 px • 4:5 Aspect Ratio
+  </text>
+  <text x="400" y="760" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="400" fill="#C58F91">
+    Optimal Composition: Close/Medium Bridal Portrait with Dupatta
+  </text>
+
+  <!-- Anti-Stock/AI Authenticity Verification Policy -->
+  <rect x="120" y="795" width="560" height="95" rx="6" fill="#1E0D16" fill-opacity="0.75" stroke="#DFC8C2" stroke-opacity="0.3" stroke-width="1" />
+  <text x="400" y="828" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="600" fill="#D4B98E" letter-spacing="1">
+    AUTHENTICITY POLICY
+  </text>
+  <text x="400" y="852" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="400" fill="#DFC8C2">
+    Only verified, owner-approved client photography will be published here.
+  </text>
+  <text x="400" y="872" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="400" fill="#74686A">
+    Stock models and AI faces are strictly prohibited as proof of Amrapali's work.
+  </text>
+
+  <!-- Subtle Bottom Footer Tag -->
+  <text x="400" y="930" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="500" fill="#B99561" letter-spacing="2">
+    BHIWANDI, THANE, MAHARASHTRA
+  </text>
+</svg>

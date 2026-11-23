@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450" fill="none">
+  <defs>
+    <linearGradient id="partyBg" x1="0" y1="0" x2="600" y2="450" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#241424"/>
+      <stop offset="60%" stop-color="#34122C"/>
+      <stop offset="100%" stop-color="#1A0C16"/>
+    </linearGradient>
+    <linearGradient id="partyGold" x1="150" y1="80" x2="450" y2="350" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F5E5C9"/>
+      <stop offset="50%" stop-color="#D4B98E"/>
+      <stop offset="100%" stop-color="#B99561"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="450" fill="url(#partyBg)"/>
+
+  <!-- Luxury Filigree Borders -->
+  <rect x="20" y="20" width="560" height="410" rx="4" stroke="#B99561" stroke-width="1.5" stroke-opacity="0.35"/>
+  <rect x="28" y="28" width="544" height="394" rx="2" stroke="#B99561" stroke-width="0.75" stroke-opacity="0.2"/>
+
+  <!-- Corner Filigree -->
+  <path d="M35 55 V 35 H 55" stroke="#B99561" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M565 55 V 35 H 545" stroke="#B99561" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M35 395 V 415 H 55" stroke="#B99561" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M565 395 V 415 H 545" stroke="#B99561" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Party Radiance & Evening Sparkle Motif -->
+  <g transform="translate(300, 175)">
+    <!-- Radiance Circle -->
+    <circle cx="0" cy="0" r="85" stroke="#B99561" stroke-width="1" stroke-dasharray="3 3" stroke-opacity="0.35"/>
+    <circle cx="0" cy="0" r="70" stroke="#B99561" stroke-width="0.75" stroke-opacity="0.5"/>
+    <circle cx="0" cy="0" r="55" fill="#3D1A2C" fill-opacity="0.4" stroke="url(#partyGold)" stroke-width="1.5"/>
+
+    <!-- Central 8-Pointed Starburst Accent -->
+    <path d="M0 -34 L5 -12 L28 -12 L10 2 L17 24 L0 10 L-17 24 L-10 2 L-28 -12 L-5 -12 Z" fill="#D4B98E" fill-opacity="0.8" stroke="url(#partyGold)" stroke-width="1"/>
+    
+    <!-- Micro Sparkles -->
+    <circle cx="-38" cy="-28" r="2.5" fill="#F5E5C9"/>
+    <circle cx="42" cy="-22" r="3" fill="#F5E5C9"/>
+    <circle cx="-35" cy="32" r="2" fill="#D4B98E"/>
+    <circle cx="36" cy="30" r="2.5" fill="#D4B98E"/>
+  </g>
+
+  <!-- Title & Category -->
+  <text x="300" y="295" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="22" font-weight="600" fill="#FBF8F4" letter-spacing="1">
+    PARTY MAKEUP
+  </text>
+  <text x="300" y="322" text-anchor="middle" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="600" fill="#B99561" letter-spacing="2.5">
+    PARTIES &amp; RECEPTIONS &#8226; AMRAPALI MAKEOVER
+  </text>
+
+  <!-- Reservation Disclaimer Box -->
+  <rect x="150" y="352" width="300" height="42" rx="3" fill="#1E0D16" fill-opacity="0.85" stroke="#B99561" stroke-width="0.75" stroke-opacity="0.45"/>
+  <text x="300" y="377" text-anchor="middle" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="10.5" font-weight="500" fill="#DFC8C2" letter-spacing="1">
+    Illustrative Service Artwork
+  </text>
+</svg>

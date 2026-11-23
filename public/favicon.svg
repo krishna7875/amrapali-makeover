@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37" />
+      <stop offset="50%" stop-color="#B99561" />
+      <stop offset="100%" stop-color="#8C6D3B" />
+    </linearGradient>
+    <radialGradient id="bgGrad" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#3D1828" />
+      <stop offset="100%" stop-color="#1E0C16" />
+    </radialGradient>
+  </defs>
+  <!-- Background Circle -->
+  <circle cx="32" cy="32" r="30" fill="url(#bgGrad)" stroke="url(#goldGrad)" stroke-width="2" />
+  <!-- Delicate Inner Ring -->
+  <circle cx="32" cy="32" r="26.5" fill="none" stroke="#B99561" stroke-width="0.75" stroke-dasharray="1 2" opacity="0.6" />
+  <!-- Monogram text 'AM' -->
+  <text x="32" y="39" font-family="'Cormorant Garamond', 'Didot', 'Playfair Display', serif" font-size="22" font-weight="600" fill="url(#goldGrad)" text-anchor="middle" letter-spacing="1">AM</text>
+  <!-- Subtle decorative star/sparkle -->
+  <path d="M46 18 Q46 22 50 22 Q46 22 46 18 Z" fill="#F2E5E2" opacity="0.9" />
+</svg>

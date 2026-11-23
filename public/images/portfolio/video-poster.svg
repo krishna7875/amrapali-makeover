@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 960" width="540" height="960" fill="none">
+  <defs>
+    <linearGradient id="vpBg" x1="0" y1="0" x2="540" y2="960" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2A1420"/>
+      <stop offset="50%" stop-color="#3D1A2C"/>
+      <stop offset="100%" stop-color="#1E0D16"/>
+    </linearGradient>
+    <linearGradient id="vpGold" x1="100" y1="200" x2="440" y2="760" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#E2CA9D"/>
+      <stop offset="50%" stop-color="#B99561"/>
+      <stop offset="100%" stop-color="#8F6B38"/>
+    </linearGradient>
+    <radialGradient id="vpGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#B99561" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#2A1420" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="540" height="960" fill="url(#vpBg)"/>
+  <circle cx="270" cy="460" r="220" fill="url(#vpGlow)"/>
+
+  <!-- Ornate Luxury Border -->
+  <rect x="20" y="20" width="500" height="920" rx="6" stroke="#B99561" stroke-width="1.5" stroke-opacity="0.4"/>
+  <rect x="28" y="28" width="484" height="904" rx="4" stroke="#B99561" stroke-width="0.75" stroke-opacity="0.25"/>
+
+  <!-- Corner Filigree -->
+  <path d="M36 56 V 36 H 56" stroke="#B99561" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M504 56 V 36 H 484" stroke="#B99561" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M36 904 V 924 H 56" stroke="#B99561" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M504 904 V 924 H 484" stroke="#B99561" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Brand Badge at Top -->
+  <g transform="translate(270, 160)">
+    <text text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="24" font-weight="600" fill="#FBF8F4" letter-spacing="1.5">
+      AMRAPALI MAKEOVER
+    </text>
+    <text y="28" text-anchor="middle" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="600" fill="#B99561" letter-spacing="3">
+      BRIDAL ARTISTRY IN MOTION
+    </text>
+  </g>
+
+  <!-- Central Play Button Emblem -->
+  <g transform="translate(270, 460)">
+    <!-- Concentric Rings -->
+    <circle cx="0" cy="0" r="75" stroke="#B99561" stroke-width="1" stroke-dasharray="4 4" stroke-opacity="0.4"/>
+    <circle cx="0" cy="0" r="62" stroke="#B99561" stroke-width="1.5" stroke-opacity="0.6"/>
+    <circle cx="0" cy="0" r="50" fill="#4B1728" stroke="url(#vpGold)" stroke-width="2"/>
+
+    <!-- Play Triangle -->
+    <polygon points="-10,-18 20,0 -10,18" fill="#FBF8F4"/>
+  </g>
+
+  <!-- Bottom Details -->
+  <g transform="translate(270, 780)">
+    <rect x="-160" y="-22" width="320" height="44" rx="4" fill="#1E0D16" fill-opacity="0.85" stroke="#B99561" stroke-width="1" stroke-opacity="0.5"/>
+    <text y="5" text-anchor="middle" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="12" font-weight="600" fill="#E2CA9D" letter-spacing="2">
+      CLICK TO PLAY REEL
+    </text>
+    <text y="48" text-anchor="middle" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="500" fill="#DFC8C2" letter-spacing="0.5">
+      Authentic Bridal Makeover Video
+    </text>
+  </g>
+</svg>

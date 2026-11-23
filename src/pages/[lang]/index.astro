@@ -1,0 +1,32 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import Hero from '../../components/sections/Hero.astro';
+import About from '../../components/sections/About.astro';
+import Services from '../../components/sections/Services.astro';
+import BookingProcess from '../../components/sections/BookingProcess.astro';
+import ServiceArea from '../../components/sections/ServiceArea.astro';
+import Portfolio from '../../components/sections/Portfolio.astro';
+import Reviews from '../../components/sections/Reviews.astro';
+import FAQ from '../../components/sections/FAQ.astro';
+import Contact from '../../components/sections/Contact.astro';
+import { type Locale, LOCALES } from '../../utils/i18n';
+
+export function getStaticPaths() {
+  return LOCALES.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const currentLang = (lang as Locale) || 'en';
+---
+
+<PageLayout lang={currentLang}>
+  <Hero lang={currentLang} />
+  <About lang={currentLang} />
+  <Services lang={currentLang} />
+  <BookingProcess lang={currentLang} />
+  <ServiceArea lang={currentLang} />
+  <Portfolio lang={currentLang} />
+  <Reviews lang={currentLang} />
+  <FAQ lang={currentLang} />
+  <Contact lang={currentLang} />
+</PageLayout>

@@ -1,0 +1,169 @@
+---
+import { getTranslations, type Locale } from '../../utils/i18n';
+import business, { buildWhatsAppUrl } from '../../utils/business';
+import { Phone, MapPin, ArrowUp } from 'lucide-react';
+import { InstagramIcon, WhatsAppIcon } from '../ui/Icons';
+
+interface Props {
+  lang: string;
+}
+
+const { lang } = Astro.props;
+const currentLang = (lang as Locale) || 'en';
+const t = getTranslations(currentLang);
+const homeUrl = `/${currentLang}/`;
+const currentYear = new Date().getFullYear();
+const whatsAppHref = buildWhatsAppUrl(business.contact.rawPhone, t.floatingWhatsApp.defaultMessage);
+---
+
+<footer class="bg-[#2A1420] text-[#FBF8F4] border-t border-[#3D1F30] relative z-30 transition-colors">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 pb-12 border-b border-[#3D1F30]">
+      
+      {/* Brand & Narrative */}
+      <div class="space-y-4 text-left">
+        <a href={homeUrl} class="inline-block group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B99561] rounded-[2px]">
+          <span class="font-serif text-2xl font-medium tracking-tight text-[#FBF8F4] group-hover:text-[#D4B98E] transition-colors">
+            {t.common.brandName}
+          </span>
+          <span class="block text-[10px] uppercase tracking-[0.2em] text-[#B99561] font-medium mt-1">
+            {t.common.brandTagline}
+          </span>
+        </a>
+        <p class="text-xs text-[#DFC8C2] leading-relaxed max-w-sm">
+          {t.footer.description}
+        </p>
+        <div class="flex items-start gap-2 pt-2 text-xs text-[#DFC8C2]">
+          <MapPin className="w-4 h-4 text-[#B99561] shrink-0 mt-0.5" aria-hidden="true" />
+          <span>{business.location.displayLocation} &bull; {t.common.onLocationService}</span>
+        </div>
+      </div>
+
+      {/* Confirmed Services */}
+      <div class="space-y-4 text-left">
+        <h3 class="font-serif text-lg text-[#FBF8F4] font-medium tracking-wide">
+          {t.footer.servicesTitle}
+        </h3>
+        <ul class="space-y-2 text-xs text-[#DFC8C2]">
+          {business.services.map((service) => (
+            <li>
+              <a 
+                href={`${homeUrl}#services`}
+                class="hover:text-[#D4B98E] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B99561] rounded-[2px]"
+              >
+                {t.services[service.id]}
+              </a>
+            </li>
+          ))}
+        </ul>
+        <p class="text-[11px] text-[#B99561] italic pt-1">
+          {t.common.enquiryBasedPricing}
+        </p>
+      </div>
+
+      {/* Quick Navigation Links */}
+      <div class="space-y-4 text-left">
+        <h3 class="font-serif text-lg text-[#FBF8F4] font-medium tracking-wide">
+          {t.footer.quickLinksTitle}
+        </h3>
+        <ul class="space-y-2 text-xs text-[#DFC8C2]">
+          <li>
+            <a href={`${homeUrl}#about`} class="hover:text-[#D4B98E] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B99561]">
+              {t.nav.about}
+            </a>
+          </li>
+          <li>
+            <a href={`${homeUrl}#services`} class="hover:text-[#D4B98E] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B99561]">
+              {t.nav.services}
+            </a>
+          </li>
+          <li>
+            <a href={`${homeUrl}#process`} class="hover:text-[#D4B98E] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B99561]">
+              {t.nav.process}
+            </a>
+          </li>
+          <li>
+            <a href={`${homeUrl}#portfolio`} class="hover:text-[#D4B98E] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B99561]">
+              {t.nav.portfolio}
+            </a>
+          </li>
+          <li>
+            <a href={`${homeUrl}#reviews`} class="hover:text-[#D4B98E] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B99561]">
+              {t.nav.reviews}
+            </a>
+          </li>
+          <li>
+            <a href={`${homeUrl}#faq`} class="hover:text-[#D4B98E] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B99561]">
+              {t.nav.faq}
+            </a>
+          </li>
+          <li>
+            <a href={`${homeUrl}#contact`} class="hover:text-[#D4B98E] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B99561]">
+              {t.nav.contact}
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      {/* Direct Contact & Social */}
+      <div class="space-y-4 text-left">
+        <h3 class="font-serif text-lg text-[#FBF8F4] font-medium tracking-wide">
+          {t.footer.contactTitle}
+        </h3>
+        <ul class="space-y-2.5 text-xs text-[#DFC8C2]">
+          <li>
+            <a 
+              href={whatsAppHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 hover:text-[#D4B98E] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B99561]"
+            >
+              <WhatsAppIcon className="w-4 h-4 shrink-0" aria-hidden="true" />
+              <span>{t.footer.whatsAppNow}: {business.contact.displayPhone}</span>
+            </a>
+          </li>
+          <li>
+            <a 
+              href={business.contact.directPhoneTel}
+              class="inline-flex items-center gap-2 hover:text-[#D4B98E] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B99561]"
+            >
+              <Phone className="w-4 h-4 text-[#B99561]" aria-hidden="true" />
+              <span>{t.footer.callNow}: {business.contact.displayPhone}</span>
+            </a>
+          </li>
+          <li>
+            <a 
+              href={business.social.instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 hover:text-[#D4B98E] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B99561]"
+            >
+              <InstagramIcon className="w-4 h-4 text-[#C58F91]" />
+              <span>{business.social.instagramHandle}</span>
+            </a>
+          </li>
+        </ul>
+        <div class="pt-2 text-[11px] text-[#DFC8C2]/80 leading-relaxed border-t border-[#3D1F30]">
+          <p>{t.footer.enquiryOnlyDisclaimer}</p>
+        </div>
+      </div>
+
+    </div>
+
+    {/* Bottom Bar: Copyright & Back to Top */}
+    <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#DFC8C2]/70 text-center sm:text-left">
+      <p>
+        &copy; {currentYear} {business.brand.name}. {t.footer.copyrightText}
+      </p>
+
+      <a
+        href="#top"
+        class="inline-flex items-center gap-1.5 text-xs text-[#D4B98E] hover:text-[#FBF8F4] transition-colors py-1 px-2 rounded-[2px] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B99561]"
+        aria-label={t.footer.backToTop}
+      >
+        <span>{t.footer.backToTop}</span>
+        <ArrowUp className="w-3.5 h-3.5" aria-hidden="true" />
+      </a>
+    </div>
+  </div>
+</footer>

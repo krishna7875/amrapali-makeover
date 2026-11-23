@@ -1,0 +1,114 @@
+@import "tailwindcss";
+@import "./tokens.css";
+
+@theme {
+  --color-burgundy: #4B1728;
+  --color-burgundy-dark: #37101D;
+  --color-burgundy-light: #642037;
+
+  --color-plum: #2A1420;
+  --color-plum-dark: #1E0D16;
+  --color-plum-light: #3D1F30;
+
+  --color-ivory: #FBF8F4;
+  --color-ivory-warm: #F6F0E7;
+  --color-ivory-light: #FFFDFB;
+
+  --color-blush: #F2E5E2;
+  --color-blush-light: #FAF4F2;
+  --color-blush-dark: #E4D0CB;
+
+  --color-rose: #C58F91;
+  --color-rose-muted: #B47C7E;
+  --color-rose-light: #E0BCBD;
+
+  --color-gold: #B99561;
+  --color-gold-light: #D4B98E;
+  --color-gold-dark: #977643;
+  --color-gold-subtle: #F5EFE6;
+
+  --color-ink: #24191B;
+  --color-ink-muted: #524245;
+  --color-ink-soft: #74686A;
+
+  --color-border-subtle: #EADBD7;
+  --color-border-warm: #DFC8C2;
+
+  --font-serif: 'Cormorant Garamond', 'Playfair Display', 'Rozha One', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', 'Inter', 'Noto Sans Devanagari', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-devanagari-serif: 'Rozha One', 'Noto Serif Devanagari', serif;
+  --font-devanagari-sans: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif;
+}
+
+/* ==========================================================================
+   Base Layer & Resets
+   ========================================================================== */
+html {
+  background-color: var(--color-ivory);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Consistent section anchor scroll offset for sticky header */
+.section-anchor {
+  scroll-margin-top: 1.25rem; /* 20px on mobile (<640px) so heading sits right below 67px navbar */
+}
+
+@media (min-width: 640px) {
+  .section-anchor {
+    scroll-margin-top: 2rem; /* 32px on tablet (640px-1023px) so heading sits right below 91px navbar */
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-anchor {
+    scroll-margin-top: 0px; /* 0px on desktop (>=1024px) because py-28 (112px) provides exact 21px buffer below 91px navbar */
+  }
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--color-ivory);
+  color: var(--color-ink);
+  overflow-x: hidden;
+}
+
+/* Devanagari specific font handling */
+:lang(hi), :lang(mr) {
+  font-family: var(--font-devanagari-sans);
+}
+
+:lang(hi) .font-serif, :lang(mr) .font-serif {
+  font-family: var(--font-devanagari-serif);
+}
+
+/* Accessible focus styling */
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+/* Selection highlight */
+::selection {
+  background-color: var(--color-blush-dark);
+  color: var(--color-plum-dark);
+}
+
+/* ==========================================================================
+   Reduced Motion
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
