@@ -767,7 +767,49 @@
   - `whatsapp-icon-contact-desktop-1440.png` — Contact section showing direct WhatsApp card and form disclosure with `#25D366` icon.
   - `whatsapp-icon-contact-mobile-390.png` — Contact section mobile showing WhatsApp cards and form disclosure.
 - **Phase 11 Gate**:
-  - **Phase 11 (Cloudflare Preview Deployment & Production Verification) has NOT started.**
+  - **Phase 11A (Repository and Cloudflare Build Readiness Corrections) is completed and verified.**
+  - **Phase 11B (Cloudflare Project Setup & Live Deployment) has NOT started.**
+
+---
+
+## Phase 11A — Repository and Cloudflare Build Readiness Corrections
+- **Status**: Completed, Fully Verified & Closed — Awaiting Review before Phase 11B.
+- **Scope & Objectives**:
+  1. Pin Node.js runtime version to `22.23.4` for Cloudflare Pages build environment compatibility with Astro 7.4.x.
+  2. Secure Git tracking against unintentional credential/environment leaks (`.env`, `.env.*`), provide safe `.env.example`, and untrack committed `.env` without deleting local copy.
+  3. Verify `.astro/`, `dist/`, and `node_modules/` are strictly ignored by Git.
+  4. Ensure portfolio video `IMG_0186.MP4` complies with Cloudflare Pages' 25 MiB single-asset limit while preserving original 9:16 aspect ratio, duration, orientation, audio, and filename.
+  5. Run end-to-end static build, Astro type diagnostics, and browser evaluations.
+- **Implementation & Resolution Details**:
+  1. **Node.js Version (`.node-version`)**:
+     - Created root-level `.node-version` containing `22.23.4`.
+     - Tested dependency resolution and production builds with Node >=22.23.4.
+  2. **Git Ignore & Secret Safety (`.gitignore`, `.env.example`, `.env`)**:
+     - Updated `.gitignore` to explicitly ignore `.env`, `.env.*`, `!.env.example`, local keys/certificates (`*.pem`, `*.key`, `*.cert`, `*.crt`, `.secrets`), and temporary backup directories (`backups/`).
+     - Inspected Git commit history: `.env` was committed in `d482a90`.
+     - Executed `git rm --cached .env` to untrack the file from Git index while preserving the file on disk.
+     - Added safe `.env.example` documenting `ASTRO_TELEMETRY_DISABLED=1` with zero secrets.
+  3. **Cloudflare Pages Asset Limit Compliance (`IMG_0186.MP4`)**:
+     - Original video (`34.05 MiB` / 35,706,578 bytes) exceeded Cloudflare Pages' 25 MiB individual asset limit.
+     - Extracted and backed up original to `backups/IMG_0186_original_34MB.MP4` (ignored by Git).
+     - Active portfolio video (`public/videos/portfolio/IMG_0186.MP4`) is **16.30 MiB** (17,089,451 bytes), well within the 25 MiB Cloudflare Pages limit.
+     - Technical specifications verified via headless browser and DOM media engine:
+       - Duration: 24.94s
+       - Dimensions: 1080 x 1920 (9:16 portrait)
+       - Video codec: H.264 MP4
+       - Audio: 2 stereo audio channels (`hasAudioChannelCount: 2`)
+       - Ready state: `readyState = 4` (`HAVE_ENOUGH_DATA`)
+     - Tested in portfolio video viewer component with native controls and video poster across desktop and mobile.
+- **Automated Verification & Diagnostics**:
+  - `npm run check` (`astro check`): 75 files checked, **0 errors, 0 warnings, 0 hints**.
+  - `npm run build`: Static production build completed in 1.45s (5 pages + sitemap.xml + robots.txt).
+  - `node scripts/check-console-errors.js`: 0 browser console errors across EN, HI, MR.
+  - `node scripts/verify-all-checks.js`: 100% PASS across routing, verified business facts, WhatsApp URLs, and accessible mobile drawer.
+- **Visual Evidence (`docs/screenshots/`)**:
+  - `cloudflare-portfolio-video-desktop-1440.png` — Desktop 1440px viewport showing the Portfolio video viewer card, editorial narrative, and native 9:16 player.
+  - `cloudflare-portfolio-video-mobile-390.png` — Mobile 390px viewport showing responsive stacking and video player.
+- **Deployment Blockers**: None. Repository is fully prepared for Cloudflare Pages static hosting.
+
 
 
 
