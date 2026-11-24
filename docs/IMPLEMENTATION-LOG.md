@@ -826,6 +826,11 @@
 - Standardized text-based WhatsApp enquiry buttons and links to 20px icons; retained the larger icon on the floating action.
 - Confirmed 20px icon rendering in the browser and `npm.cmd run build` passed.
 
+## 2026-11-24 — Vertical spacing audit
+- Reduced repeated section padding from 64/80/112px to 40/56/80px, tightened oversized heading/module gaps, and removed orphaned Booking Process spacing left around hidden content.
+- Browser review confirmed shorter section-to-section gaps and a reduced page height while preserving section grids, card sizing, and alignment.
+- `npm.cmd run build` passed. Checked EN/HI/MR at 360, 390, 768, 1024, and 1440px; English has a separate horizontal overflow at 1024px, outside this vertical-spacing change.
+
 
 
 
