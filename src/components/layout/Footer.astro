@@ -93,11 +93,6 @@ const whatsAppHref = buildWhatsAppUrl(business.contact.rawPhone, t.floatingWhats
             </a>
           </li>
           <li>
-            <a href={`${homeUrl}#faq`} class="hover:text-[#D4B98E] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B99561]">
-              {t.nav.faq}
-            </a>
-          </li>
-          <li>
             <a href={`${homeUrl}#contact`} class="hover:text-[#D4B98E] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B99561]">
               {t.nav.contact}
             </a>
@@ -118,7 +113,7 @@ const whatsAppHref = buildWhatsAppUrl(business.contact.rawPhone, t.floatingWhats
               rel="noopener noreferrer"
               class="inline-flex items-center gap-2 hover:text-[#D4B98E] transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#B99561]"
             >
-              <WhatsAppIcon className="w-4 h-4 shrink-0" aria-hidden="true" />
+              <WhatsAppIcon className="w-5 h-5 shrink-0" aria-hidden="true" />
               <span>{t.footer.whatsAppNow}: {business.contact.displayPhone}</span>
             </a>
           </li>

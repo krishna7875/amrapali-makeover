@@ -41,7 +41,6 @@ export function HeaderNavigation({
     { href: `${homeUrl}#process`, label: t.nav.process },
     { href: `${homeUrl}#portfolio`, label: t.nav.portfolio },
     { href: `${homeUrl}#reviews`, label: t.nav.reviews },
-    { href: `${homeUrl}#faq`, label: t.nav.faq },
     { href: `${homeUrl}#contact`, label: t.nav.contact },
   ];
 
@@ -142,7 +141,7 @@ export function HeaderNavigation({
           href={whatsAppHref}
           target="_blank"
           rel="noopener noreferrer"
-          leftIcon={<WhatsAppIcon className="w-3.5 h-3.5 shrink-0" />}
+          leftIcon={<WhatsAppIcon className="w-5 h-5 shrink-0" />}
         >
           {t.nav.enquireButton}
         </Button>
@@ -240,7 +239,7 @@ export function HeaderNavigation({
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full"
-                leftIcon={<WhatsAppIcon className="w-4 h-4 shrink-0" />}
+                leftIcon={<WhatsAppIcon className="w-5 h-5 shrink-0" />}
               >
                 {t.nav.enquireButton}
               </Button>

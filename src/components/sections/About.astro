@@ -68,15 +68,15 @@ const whatsAppHref = buildWhatsAppUrl(business.contact.rawPhone, t.about.enquiry
           />
 
           <!-- 4:5 Editorial Frame for Artist Visual -->
-          <div class="relative rounded-[4px] overflow-hidden bg-[#2A1420] border-2 border-[#B99561]/50 shadow-xl aspect-4/5">
+          <div class="relative rounded-[4px] overflow-hidden bg-[#2A1420] border-2 border-[#B99561]/50 shadow-xl aspect-5/7">
             <img
-              src="/images/about/artist-placeholder.svg"
+              src="/images/about/my_photo.jpeg"
               alt={t.about.portraitAlt}
               width="800"
               height="1000"
               loading="lazy"
               decoding="async"
-              class="w-full h-full object-cover object-center select-none"
+              class="w-full h-full object-cover object-top select-none"
             />
 
             <!-- Floating Artist Badge -->
@@ -205,7 +205,7 @@ const whatsAppHref = buildWhatsAppUrl(business.contact.rawPhone, t.about.enquiry
             rel="noopener noreferrer"
             class="inline-flex items-center justify-center font-medium transition-all duration-200 cursor-pointer select-none rounded-[4px] bg-[#4B1728] text-[#FBF8F4] border border-[#4B1728] hover:bg-[#642037] hover:border-[#642037] active:bg-[#37101D] shadow-[0_4px_14px_-2px_rgba(75,23,40,0.35)] text-xs sm:text-sm px-6 py-3 gap-2.5 uppercase tracking-wider font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B99561] focus-visible:ring-offset-2 shrink-0 text-center"
           >
-            <WhatsAppIcon className="w-4 h-4 shrink-0" aria-hidden="true" />
+            <WhatsAppIcon className="w-5 h-5 shrink-0" aria-hidden="true" />
             <span>{t.about.enquireCta}</span>
           </a>
         </div>

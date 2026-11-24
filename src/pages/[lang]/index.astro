@@ -7,7 +7,6 @@ import BookingProcess from '../../components/sections/BookingProcess.astro';
 import ServiceArea from '../../components/sections/ServiceArea.astro';
 import Portfolio from '../../components/sections/Portfolio.astro';
 import Reviews from '../../components/sections/Reviews.astro';
-import FAQ from '../../components/sections/FAQ.astro';
 import Contact from '../../components/sections/Contact.astro';
 import { type Locale, LOCALES } from '../../utils/i18n';
 
@@ -27,6 +26,6 @@ const currentLang = (lang as Locale) || 'en';
   <ServiceArea lang={currentLang} />
   <Portfolio lang={currentLang} />
   <Reviews lang={currentLang} />
-  <FAQ lang={currentLang} />
+  <!-- FAQ section temporarily hidden; restore it here when ready. -->
   <Contact lang={currentLang} />
 </PageLayout>

@@ -37,20 +37,23 @@ const googleUrl = business.reviews.googleBusinessUrl || 'https://share.google/LO
         <span>{t.reviewsSection.eyebrow}</span>
       </div>
 
-      <h2
-        id="reviews-title"
-        class="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-[#2A1420] leading-[1.18] text-balance mb-4"
-      >
-        {t.reviewsSection.heading}
-      </h2>
+      <!--
+        <h2
+          id="reviews-title"
+          class="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-[#2A1420] leading-[1.18] text-balance mb-4"
+        >
+          {t.reviewsSection.heading}
+        </h2>
 
-      <p class="text-base sm:text-lg text-[#524245] leading-relaxed font-normal">
-        {t.reviewsSection.subheadline}
-      </p>
+        <p class="text-base sm:text-lg text-[#524245] leading-relaxed font-normal">
+          {t.reviewsSection.subheadline}
+        </p>
+      -->
+
     </div>
 
     <!-- Trust Pillars Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 items-stretch">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 items-stretch" style="display:none">
       
       <!-- Pillar 1: Verified Feedback -->
       <div class="bg-white rounded-[6px] border border-[#DFC8C2] p-6 sm:p-7 shadow-xs hover:shadow-md transition-shadow duration-200 flex flex-col justify-between">

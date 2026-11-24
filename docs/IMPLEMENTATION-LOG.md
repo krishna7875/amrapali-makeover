@@ -810,6 +810,22 @@
   - `cloudflare-portfolio-video-mobile-390.png` — Mobile 390px viewport showing responsive stacking and video player.
 - **Deployment Blockers**: None. Repository is fully prepared for Cloudflare Pages static hosting.
 
+## 2026-11-24 — About portrait framing
+- Updated the About portrait to align the top of the supplied photo within its existing square frame, preventing faces from being cropped by centered `object-cover`.
+- Verified the portrait loads with its expected 760 × 1280 dimensions and that the browser applies top object positioning.
+- `npm.cmd run build`: Astro check and static production build passed.
+
+## 2026-11-24 — FAQ temporarily hidden
+- Removed the FAQ section from the page render and its links from header and footer navigation; retained `FAQ.astro` for later restoration.
+
+## 2026-11-24 — Services WhatsApp button layout
+- Kept the Services WhatsApp CTA label on one line and increased its icon from 16px to 20px.
+- Verified the label remains on one line and the icon renders at 20px in mobile and desktop browser checks; `npm.cmd run build` passed.
+
+## 2026-11-24 — Consistent WhatsApp enquiry icon sizing
+- Standardized text-based WhatsApp enquiry buttons and links to 20px icons; retained the larger icon on the floating action.
+- Confirmed 20px icon rendering in the browser and `npm.cmd run build` passed.
+
 
 
 

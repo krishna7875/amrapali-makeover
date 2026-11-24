@@ -47,20 +47,22 @@ const whatsAppHref = buildWhatsAppUrl(business.contact.rawPhone, t.bookingProces
         <span>{t.bookingProcess.eyebrow}</span>
       </div>
 
-      <h2
-        id="booking-process-title"
-        class="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-[#2A1420] leading-[1.18] text-balance mb-4"
-      >
-        {t.bookingProcess.heading}
-      </h2>
+      <!-- 
+        <h2
+          id="booking-process-title"
+          class="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-[#2A1420] leading-[1.18] text-balance mb-4"
+        >
+          {t.bookingProcess.heading}
+        </h2>
 
-      <p class="text-base sm:text-lg text-[#524245] leading-relaxed font-normal">
-        {t.bookingProcess.subheadline}
-      </p>
+        <p class="text-base sm:text-lg text-[#524245] leading-relaxed font-normal">
+          {t.bookingProcess.subheadline}
+        </p>
+      -->
     </div>
 
     <!-- 4-Step Connected Sequence Grid -->
-    <div class="relative">
+    <div class="relative" style="display:none">
       <!-- Desktop Connecting Horizontal Guide Line -->
       <div
         class="hidden lg:block absolute top-10 left-16 right-16 h-px bg-[#DFC8C2] z-0"
@@ -204,7 +206,7 @@ const whatsAppHref = buildWhatsAppUrl(business.contact.rawPhone, t.bookingProces
           rel="noopener noreferrer"
           class="inline-flex items-center justify-center font-medium transition-all duration-200 cursor-pointer select-none rounded-[4px] bg-[#4B1728] text-[#FBF8F4] hover:bg-[#642037] active:bg-[#37101D] text-xs sm:text-sm px-6 py-3.5 gap-2.5 uppercase tracking-wider font-semibold shadow-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B99561] focus-visible:ring-offset-2 shrink-0 text-center"
         >
-          <WhatsAppIcon className="w-4 h-4 shrink-0" aria-hidden="true" />
+          <WhatsAppIcon className="w-5 h-5 shrink-0" aria-hidden="true" />
           <span>{t.bookingProcess.ctaButton}</span>
         </a>
       </div>
